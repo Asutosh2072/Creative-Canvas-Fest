@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Canvas Fest</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <h1>Creative Canvas Fest</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#sessions">Sessions</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#tickets">Tickets</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <h1>Creative Canvas Fest</h1>
+            <p>Unleash Your Creativity</p>
+            <a href="#tickets" class="button">Get Your Tickets</a>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="container about-container">
+            <div class="about-content">
+                <h2>About the Festival</h2>
+                <p>The Creative Canvas Fest is a celebration of art, innovation, and self-expression. Join us for a
+                    vibrant
+                    experience filled with interactive workshops, inspiring exhibits, and a community of passionate
+                    creators.</p>
+            </div>
+            <div class="about-image">
+                <img src="./rhondak-native-florida-folk-artist-_Yc7OtfFn-0-unsplash.jpg" alt="About Festival">
+            </div>
+        </div>
+    </section>
+
+    <section class="sessions-section" id="sessions">
+        <div class="container sessions-container">
+            <h2>Explore Our Sessions</h2>
+            <div class="sessions-grid">
+                <div class="session-card" onclick="openModal('session1')">
+                    <img src="./kenny-eliason-1-aA2Fadydc-unsplash.jpg" alt="Session 1">
+                    <h3>Digital Art Workshop</h3>
+                </div>
+                <div class="session-card" onclick="openModal('session2')">
+                    <img src="./valentine-bibot-XZY9u0ELQUA-unsplash.jpg" alt="Session 2">
+                    <h3>Sculpting Masterclass</h3>
+                </div>
+                <div class="session-card" onclick="openModal('session3')">
+                    <img src="./jose-p-ortiz-1gFmpx5i4Gs-unsplash.jpg" alt="Session 3">
+                    <h3>Photography Workshop</h3>
+                </div>
+                <!-- <div class="session-card" onclick="openModal('session4')">
+                    <img src="./kenny-eliason-1-aA2Fadydc-unsplash.jpg" alt="Session 4">
+                    <h3>Creative Writing Session</h3>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Session modal -->
+    <div class="modal" id="sessionModal">
+        <div class="modal-content" id="modalContent">
+            <button class="close-btn" onclick="closeModal()">×</button>
+            <!-- Content dynamically loaded via js -->
+        </div>
+    </div>
+
+    <section class="gallery-section" id="gallery">
+        <div class="container gallery-container">
+            <h2>Past Events</h2>
+            <div class="gallery-grid">
+                <div class="gallery-card" onclick="openImageModal('image1')">
+                    <img src="./al-elmes-ULHxWq8reao-unsplash.jpg" alt="Gallery 1">
+                </div>
+                <div class="gallery-card" onclick="openImageModal('image2')">
+                    <img src="./al-elmes-ULHxWq8reao-unsplash.jpg" alt="Gallery 2">
+                </div>
+                <div class="gallery-card" onclick="openImageModal('image3')">
+                    <img src="./al-elmes-ULHxWq8reao-unsplash.jpg" alt="Gallery 3">
+                </div>
+                <div class="gallery-card" onclick="openImageModal('image4')">
+                    <img src="./al-elmes-ULHxWq8reao-unsplash.jpg" alt="Gallery 4">
+                </div>
+                <div class="gallery-card" onclick="openImageModal('image5')">
+                    <img src="./al-elmes-ULHxWq8reao-unsplash.jpg" alt="Gallery 5">
+                </div>
+                <!-- <div class="gallery-card" onclick="openImageModal('image6')">
+                    <img src="./al-elmes-ULHxWq8reao-unsplash.jpg" alt="Gallery 6">
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Image modal -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeImageModal()">×</button>
+            <img id="modalImage" src="" alt="Image Preview">
+        </div>
+    </div>
+    <section class="tickets-section" id="tickets">
+        <div class="container tickets-container">
+            <h2>Get Your Tickets</h2>
+            <p class="price">Festival Pass: $149</p>
+            <a href="#contact" class="button">Purchase Now</a>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container contact-container">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message..." rows="4" required></textarea>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>© 2024 Creative Canvas Fest. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
